@@ -21,7 +21,7 @@
     </div>
 </section>
 <section class="main" id="home">
-<aside>
+<aside onmouseover="showForm()" onmouseout="hideForm()">
     <div class="side">
         <div class="call">09130174027</div>
         <div class="reg">Register</div>
@@ -29,7 +29,11 @@
     <div class="form">
         <h4>Register your account!</h4>
         <form>
-
+           <input type="text" class="input" placeholder="Email" required>
+           <input type="password"class="input" placeholder="Password" required>
+           <input type="password"class="input" placeholder="Confirm Password" required>
+           <button>Register</button>
+           <p>Already have an account?Login</p>
         </form>
     </div>
 </aside>
@@ -82,7 +86,7 @@
 <div class="vacation">
     <div class="vacations">
         <h4>Total Vacations Booked this Month</h4>
-        <h2>100,300</h2>
+        <h2 id="user">0</h2>
     </div>
 
 </div>
@@ -176,7 +180,42 @@
             </div>
         </div>
     </div>
+    <div class="left">
+        <div class="review">
+            <p>Leave a review.</p>
+            <p>See all customers review.</p>
+        </div>
+    </div>
+   
 </div>
+<div class="deal">
+    <h2>Deals of the week.</h2>
+</div>
+<div class="claim">
+    <div class="left">
+        <h4>Athens, Greece</h4>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore 
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+    <div class="right">
+        <img src="images/greece.jpg" alt="loction">
+    </div>
+</div>
+<footer>
+    <div class="center">
+        <h4>Travel Forest</h4>
+        <p>Find us on Social Media</p>
+        <ul>
+            <li><img src="images/social/facebook.png" alt="social medial icon"></li>
+            <li><img src="images/social/instagram.png" alt="social medial icon"></li>
+            <li><img src="images/social/pinterest.png" alt="social medial icon"></li>
+            <li><img src="images/social/twitter.png" alt="social medial icon"></li>
+            <li><img src="images/social/youtube.png" alt="social medial icon"></li>
+        </ul>
+        <hr>
+        <small>Copyright 2020 - All Rights Reserved</small>
+    </div>
+</footer>
 </section>
 <script src="script.js"></script>
 </body>

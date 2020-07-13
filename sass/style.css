@@ -52,7 +52,7 @@ body, button, input {
   width: 100%;
   height: 100%; }
 
-#landing button {
+#landing button, .form button {
   padding: 1em 4em;
   background: white;
   margin-top: 2em;
@@ -190,13 +190,15 @@ aside {
     padding: 18px; }
 
 .review {
-  background: #404040; }
-  .review .left {
-    background-color: white; }
+  color: #0d77bb !important;
+  z-index: 100;
+  position: relative;
+  width: 80%;
+  margin: 1em auto; }
 
 .bg-white {
   background: white;
-  width: 70%;
+  width: 69.5vw;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -210,7 +212,10 @@ aside {
     color: #404040 !important;
     width: 50%;
     position: relative;
-    margin: 2em auto; }
+    margin: 2em auto;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    text-align: center; }
   .view .users {
     position: relative;
     z-index: 20;
@@ -226,6 +231,8 @@ aside {
       text-align: left;
       background: #0d77bb;
       color: white !important; }
+      .view .users .card p {
+        font-size: 1em; }
       .view .users .card .card-header {
         display: flex;
         align-items: center; }
@@ -242,20 +249,86 @@ aside {
       .view .users .card .c2 {
         margin-left: 1em; }
         .view .users .card .c2 h5 {
-          font-size: 1.125em; }
+          font-size: 1.125em;
+          margin-bottom: .3em; }
 
 .view::before {
   clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
   bottom: 100%; }
 
-.view::before, .view::after {
+.view::before {
   content: "";
   height: 12vh;
   background-color: rgba(227, 227, 227, 0.08);
   position: absolute;
   width: 100%;
   box-sizing: border-box;
-  border-right: 70vw solid white; }
+  border-right: 69.5vw solid white; }
+
+.deal {
+  background: rgba(13, 13, 13, 0.52);
+  width: 60%;
+  padding: 2em 3em 2em 5em; }
+
+.claim {
+  display: flex;
+  width: 96%;
+  justify-content: center;
+  padding: 1em 0;
+  align-content: center;
+  align-items: center; }
+  .claim .right {
+    width: 50%;
+    height: 576px; }
+  .claim .left {
+    width: 50%; }
+  .claim .right img {
+    width: 100%; }
+
+footer {
+  width: 100%;
+  height: 300px;
+  background: rgba(13, 13, 13, 0.52);
+  text-align: center;
+  display: flex;
+  align-items: center; }
+  footer .center, footer .view .left, .view footer .left {
+    width: 80%;
+    margin: 0 auto; }
+    footer .center ul, footer .view .left ul, .view footer .left ul {
+      width: 200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center; }
+      footer .center ul li, footer .view .left ul li, .view footer .left ul li {
+        margin: 6px;
+        width: 2.25rem;
+        height: 2.25rem; }
+      footer .center ul li img, footer .view .left ul li img, .view footer .left ul li img {
+        width: 100%; }
+
+hr {
+  width: 4%;
+  border: 1px solid white;
+  margin: .5em auto; }
+
+.form {
+  display: none;
+  margin-top: -9em;
+  margin-left: 4em; }
+  .form button {
+    padding: .5em 5em !important;
+    margin-bottom: 1em; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+
+.input {
+  background: transparent;
+  border-bottom: 1px solid white;
+  margin: 1em 0; }
 
 @media screen and (max-width: 900px) {
   #landing div {
