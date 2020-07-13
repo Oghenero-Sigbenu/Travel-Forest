@@ -1,0 +1,322 @@
+@keyframes slideIn{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes header {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes homeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+$text-color: white;
+$sec-color: #404040;
+body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    color: $text-color;
+}
+li{
+    list-style: none;
+}
+body, button, input {
+    font-family: 'Questrial', sans-serif;
+    color: $text-color;
+    outline: none;
+ }
+*{
+    margin: 0;
+    padding: 0; 
+    border:none;
+    box-sizing: border-box;
+}
+.bg{
+    background-image: url("../images/bg.jpg");
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+%section {
+    z-index: 200;
+    position: relative;
+    top:0;
+    width: 100%;
+    height: 100%;
+}
+%button-white{
+        padding: 1em 4em;
+        background: $text-color;
+        margin-top: 2em;
+        border-radius: 5px;
+        color: $sec-color
+}
+.side{
+    display: flex;
+    flex-direction: column;
+    .call{
+        rotate: (90deg);
+        margin-bottom: 130px;
+    }
+    .reg{
+        rotate: (90deg);
+        margin-bottom: 50px;
+    }
+}
+aside{
+    position: absolute;
+    right: 0px;
+    padding-top: 20vh;
+    background:rgba(227, 227, 227, 0.08);
+    height: 100vh;
+    width: 70px;
+    &:hover{
+        width: 50%;
+    }
+}
+.gallery{
+    width: 80%;
+    margin: 0 auto;
+}
+.right{
+    // width: 50%;
+    // height: 100%;
+    // object-fit: cover;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.sec{
+                
+    margin-left: 5em;
+    // margin-right: -10em;
+    background: red;
+}
+.se{
+    margin-right: -10em;
+}
+.left{
+    padding-left: 5em;
+}
+.row{
+    width: 80%;
+    height: 200px;
+    display: flex;
+    margin-bottom: 20px;
+}
+.main{
+    background-color: rgba(20, 20, 20, 0.86);
+    // padding-left: 4em;
+    @extend %section;
+    display: none;
+    animation: 2s ease-out 0s 1 homeIn;
+
+}
+#landing{
+    h1{
+        font-size: 3rem;
+        font-weight: lighter;
+    animation: 2s ease-out 0s 1 header;
+
+    }
+    p{
+        line-height: 1.5;
+        font-size: 1.3rem;
+    }
+    @extend %section;
+    flex-direction: column;
+    display:flex;
+    height: 100vh;
+    // width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    div{
+        width: 40%;
+        text-align: center;
+    animation: 1s ease-out 0s 1 slideIn;
+
+    }
+    button{
+        @extend %button-white;
+    }
+}
+.menu{
+    display: flex;
+    list-style: none;
+    border-bottom: 1px solid white;
+    padding-top: 4em;
+    margin-left: 4em;
+    width: 70%;
+    li{
+        margin: 5px;
+        padding: 8px;
+        font-size: 20px;
+    }
+}
+.book{
+    width: 50%;
+    margin-top: 12em;
+    padding-bottom: 5em;
+    line-height: 2em;
+    margin-left: 4em;
+
+    h4{
+        padding-bottom: 1.5em;
+    }
+    button{
+        padding: 1em 16em 1em 1.4em;
+        background: $sec-color;
+        margin-top: 4em;
+    }
+}
+.vacations{
+    margin: 6em auto;
+    width: 60%;
+    border-bottom: 1px solid $text-color;
+    border-top: 1px solid $text-color;
+    text-align: center;
+    padding: 2em 0;
+}
+.vacation{
+    // height: 100vh;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    // align-content: center;
+    width: 100%;
+}
+.member{
+    @extend .vacation;
+    height: 100vh;
+    display: block;
+    margin-bottom: 9em;
+    .center{
+        @extend .vacations;
+        border: none;
+        margin: 1em auto;
+    }
+    input{
+        background: transparent;
+        border-bottom: 1px solid $text-color;
+    } 
+}
+.countries{
+    // @extend .center;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 2em 0;
+    width: 60% !important;
+    justify-content: center;
+    margin: 1em auto;
+    li{
+        margin-left: 10px;
+        padding: 18px;
+        // width: 100px;
+    }
+}
+.review{
+    background: $sec-color;
+    .left{
+        background-color: white;
+    }
+}
+.bg-white{
+    background: white;
+    // height: 1000px;
+    width: 70%;
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+
+}
+.view{
+    color: $sec-color !important;
+    z-index: 100;
+    position: relative;
+    .left{
+        @extend .center;
+        color: $sec-color !important;
+        width: 50%;
+        position: relative;
+        margin: 2em auto;
+    }
+    .users{
+        position: relative;
+        z-index: 20;
+        display: flex;
+        justify-content: space-between;
+        width: 93%;
+        margin: 0 auto;
+        .card:nth-child(2){
+            background: #184a6a;;
+        }
+        .card{
+            width: 31%;
+            padding: 1em;
+            text-align: left;
+            background: #0d77bb;
+            color: white !important;
+            .card-header{
+                display: flex;
+                align-items: center;
+            }
+            .card-body{
+            line-height: 2;
+            margin-top: .5em;
+            }
+            .c1{
+                width: 6.2rem;
+                height: 6.2rem;
+                border-radius: 50%;
+                img{
+                    width: 100%;
+                    border-radius: 50%;
+                    // height: 100%;
+                }
+            }
+            .c2{
+                margin-left: 1em;
+                h5{
+                    font-size: 1.125em;
+                }
+            }
+        }
+    }
+}
+.view::before {
+    clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
+    bottom: 100%;
+}
+.view::before, .view::after {
+    content: "";
+    height: 12vh;
+    background-color: rgba(227, 227, 227, 0.08);
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    border-right: 70vw solid white;
+}
+@media screen and (max-width: 900px){
+    #landing{
+        div{
+            width: 90%;
+            text-align: center;
+        }
+    }
+}
